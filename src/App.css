@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
+/* App.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #c9cff2 0%, #060b50 100%);
+  scroll-behavior: smooth;
+  background-attachment: fixed; /* Gradyanın kaydırma ile birlikte hareket etmesini sağlar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width: 768px) {
+  .game-card {
+    max-width: 100%; /* Full width on smaller screens */
+    margin: 10px; /* Adjust margins for smaller screens */
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .video-wrapper {
+    max-width: 100%; /* Ensure video wrapper fits within card */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Şeffaf kenarlıklı ve ışıltılı container */
+.intro-container {
+  display: inline-block;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative; /* ışıltı efektini konumlandırmak için gerekli */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Işıltı efekti */
+  margin-bottom: 50px;
+  margin-top: 60px;
+  padding-inline: 30%;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  color: aliceblue;
+  margin: 0;
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: aliceblue;
+  margin: 10px 0 0;
+}
+
+.header {
+  position: fixed; /* Header'ı sayfanın üst kısmına yapışık yapar */
+  top: 0; /* Üstten sıfır mesafe */
+  left: 0; /* Soldan sıfır mesafe */
+  width: 100%; /* Sayfanın genişliğini kaplar */
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  background-color: #383080; /* Header arka plan rengi */
+  color: white;
+  z-index: 1000; /* Diğer içeriklerin üstünde görünmesi için */
+  box-sizing: border-box; /* Padding ve border'ın genişlik hesaplamasına dahil edilmesini sağlar */
+}
+
+.App {
+  width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  padding-top: 40px;
+}
+
+
+
+.education-timeline {
+  width: 70%;
+  margin-top: 50px;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+  padding-left: 20px;
+  margin-bottom: 100px;
+}
+
+.education-timeline h2 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+.timeline-item h3 {
+  margin: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline-item p {
+  margin: 5px 0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeline-item a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.timeline-item a:hover {
+  text-decoration: underline;
+}
+
+.mail{
+  color: #c9cff2;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icons a {
+  color: white;
+  font-size: 2em;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #060b50; /* Hover durumunda renk değişimi */
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Floating effect */
+  padding: 20px;
+  width: 50%; /* Use a percentage width to be responsive */
+  margin: 20px auto; /* Center horizontally */
+  text-align: center; /* Center text */
+  align-items: center;
+  color: #060b50;
+}
+
+.game-card:hover {
+  transform: translateY(-10px); /* Hover efekti */
+}
+
+.game-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.game-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2em;
+}
+
+.game-card p {
+  color: #555;
+}
+
+
+/* Yaldız efekti */
+@keyframes sparkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.sparkle {
+  position: fixed; /* Sayfa kaydırıldığında sabit kalmasını sağlar */
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+  pointer-events: none;
+  animation: sparkle 2s infinite;
+  z-index: 1000; /* Diğer içeriklerin üstünde durması için */
+}
+
+.sparkle:nth-child(1) {
+  width: 12px;
+  height: 12px;
+  bottom: 5%;
+  right: 8%;
+  opacity: 0.8;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  bottom: 10%;
+  right: 10%;
+  opacity: 0.7;
+  animation-delay: 0.5s;
+}
+
+.sparkle:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  bottom: 7%;
+  right: 15%;
+  opacity: 0.6;
+  animation-delay: 1s;
+}
+
+.sparkle:nth-child(4) {
+  width: 6px;
+  height: 6px;
+  bottom: 12%;
+  right: 5%;
+  opacity: 0.5;
+  animation-delay: 1.5s;
+}
+
+.sparkle:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  bottom: 3%;
+  right: 12%;
+  opacity: 0.4;
+  animation-delay: 2s;
+}
+
+.sparkle:nth-child(6) {
+  width: 5px;
+  height: 5px;
+  bottom: 14%;
+  right: 20%;
+  opacity: 0.6;
+  animation-delay: 2.5s;
+}
+
+.sparkle:nth-child(7) {
+  width: 4px;
+  height: 4px;
+  bottom: 17%;
+  right: 8%;
+  opacity: 0.7;
+  animation-delay: 3s;
+}
+
+.sparkle:nth-child(8) {
+  width: 6px;
+  height: 6px;
+  bottom: 9%;
+  right: 17%;
+  opacity: 0.5;
+  animation-delay: 3.5s;
+}
+
+.sparkle:nth-child(9) {
+  width: 3px;
+  height: 3px;
+  bottom: 6%;
+  right: 23%;
+  opacity: 0.5;
+  animation-delay: 4s;
+}
+
+.sparkle:nth-child(10) {
+  width: 8px;
+  height: 8px;
+  bottom: 11%;
+  right: 25%;
+  opacity: 0.6;
+  animation-delay: 4.5s;
+}
+
+.sparkle:nth-child(11) {
+  width: 5px;
+  height: 5px;
+  bottom: 15%;
+  right: 4.5%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  animation-delay: 1s;
+}
+.sparkle:nth-child(12) {
+  width: 10px;
+  height: 10px;
+  bottom: 2%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  animation-delay: 4.5s;
 }

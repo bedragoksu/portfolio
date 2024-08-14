@@ -1,0 +1,42 @@
+/* Header.css */
+
+.header {
+    position: fixed; /* Header'ı sayfanın üst kısmına yapışık yapar */
+    top: 0; /* Üstten sıfır mesafe */
+    left: 0; /* Soldan sıfır mesafe */
+    width: 100%; /* Sayfanın genişliğini kaplar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #060b50 0%, #c9cff2 100%); /* Gradyan arka plan */ /* Header arka plan rengi */
+    color: white;
+    z-index: 1000; /* Diğer içeriklerin üstünde görünmesi için */
+    box-sizing: border-box; /* Padding ve border'ın genişlik hesaplamasına dahil edilmesini sağlar */
+  }
+  
+  .header-left {
+    font-size: 1.5em;
+    transform: none; /* Düz görünüm için dönüşümü kaldır */
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Dikey olarak ortala */
+    flex-wrap: wrap; /* Yazılar çok genişse bir alt satıra geçer */
+    flex: 1; /* Sağdaki öğelerin genişliğini artırır */
+    justify-content: flex-end; /* Sağ tarafta hizalar */
+  }
+  
+  .header-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+  
+  .header-link:hover {
+    color: #060b50; /* Hover etkisi */
+  }
+  
