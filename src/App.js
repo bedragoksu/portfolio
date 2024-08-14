@@ -30,7 +30,8 @@ function App() {
       <div className='intro-container'>
         <div className="intro">
           <h1>BEDRA GÖKSU</h1>
-          <p>Computer Engineer</p>
+          <p>Computer Engineer, <a className='header-link' href="https://drive.google.com/file/d/1r5mC16MSjDAng9OztYajwxRl0T1Gsulu/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a></p>
+          
         </div>
       </div>
       
@@ -69,7 +70,7 @@ function App() {
             <h3>Bachelor's Degree</h3>
             <p>Hacettepe University</p>
             <p>Computer Engineering</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">Transcript</a>
+            <a href="https://drive.google.com/file/d/1nUGFyVPglsw7Eh47qOkidQ3CSIMznEe-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Transcript</a>
           </div>
         </div>
       </div>
