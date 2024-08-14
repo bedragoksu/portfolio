@@ -68,7 +68,7 @@ function App() {
           <div className="timeline-dot"></div>
           <div className="timeline-content">
             <h3>Bachelor's Degree</h3>
-            <p>Hacettepe University</p>
+            <p>Hacettepe University, 2020 - 2024</p>
             <p>Computer Engineering</p>
             <a href="https://drive.google.com/file/d/1nUGFyVPglsw7Eh47qOkidQ3CSIMznEe-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Transcript</a>
           </div>
