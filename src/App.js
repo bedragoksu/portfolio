@@ -77,13 +77,13 @@ function App() {
 
 
       <div id="contact" className="contact-icons">
-        <a href="mailto:bedra@example.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:bedragoksu@gmail.com" target="_blank" rel="noopener noreferrer">
           <FaEnvelope />
         </a>
-        <a href="https://github.com/bedra" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/bedragoksu" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/bedra-goksu" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/bedragoksu" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
       </div>
